@@ -37,13 +37,13 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/ytskmt14/kyuyuru/tree/main/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/ytskmt14/kyuyuru/tree/main/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -53,28 +53,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    // image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "きゅーゆる",
-      // logo: {
-      //   alt: "きゅーゆるロゴ",
-      //   src: "img/logo.svg",
-      // },
-      // items: [
-      //   {
-      //     type: "docSidebar",
-      //     sidebarId: "tutorialSidebar",
-      //     position: "left",
-      //     label: "Tutorial",
-      //   },
-      //   { to: "/blog", label: "Blog", position: "left" },
-      //   {
-      //     href: "https://github.com/facebook/docusaurus",
-      //     label: "GitHub",
-      //     position: "right",
-      //   },
-      // ],
+      items: [
+        { to: "/blog", label: "Blog", position: "right" },
+        { to: "/docs/intro", label: "Docs", position: "right" },
+      ],
     },
     footer: {
       style: "dark",
@@ -126,6 +110,11 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
 };
 
 export default config;
